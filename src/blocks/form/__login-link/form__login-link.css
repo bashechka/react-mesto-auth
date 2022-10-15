@@ -1,0 +1,20 @@
+.form__login-link {
+  position: absolute;
+  top: 624px;
+  left: 419px;
+  width: 358px;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  color: #FFFFFF;
+  text-decoration: none;
+  cursor: pointer;
+  /* margin: 0;
+  padding: 0; */
+}
+
+.form__login-link:hover {
+  opacity: 0.6;
+}
