@@ -44,3 +44,7 @@
   }
 }
 
+.popup_type_tooltip .popup__container-heading {
+  text-align: center;
+  padding: 32px 0 60px 0;
+}

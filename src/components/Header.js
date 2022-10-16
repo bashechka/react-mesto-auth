@@ -10,7 +10,7 @@ function Header(props) {
         <header className="header">
           <div className="header__logo"></div>
           <div className="header__nav">
-            <p className="header__login">{props.userData.email}</p>
+            <p className="header__login">{props.authUser.email}</p>
             <button onClick={props.signOut} className="header__button-exit">Выйти</button>
           </div>
         </header>

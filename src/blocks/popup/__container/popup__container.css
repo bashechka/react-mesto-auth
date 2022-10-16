@@ -23,3 +23,13 @@
   background-color: transparent;
   width: auto;
 }
+
+.popup_type_tooltip .popup__container{
+  display: flex;
+  justify-content: center;
+  width: 430px;
+  height: 330px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
