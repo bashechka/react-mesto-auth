@@ -1,15 +1,9 @@
 .form__caption {
-  position: absolute;
-  top: 609px;
-  left: 310px;
-  width: 358px;
   font-family: inherit;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 17px;
-  text-align: center;
   color: #FFFFFF;
-  /* margin: 0;
-  padding: 0; */
+  margin: 0;
+  padding: 0;
 }

@@ -42,7 +42,7 @@ function App() {
       .catch((err) => {
         setIsTooltipPopupOpen(true);
         console.log(err);
-       })
+      })
   }, []);
 
   React.useEffect(() => {
@@ -52,7 +52,7 @@ function App() {
   function checkAuthUser() {
     const token = localStorage.getItem('token');
     if (token) {
-      auth.getAuthUser(token)
+      auth.checkToken(token)
         .then((data) => {
           if (data && data.data) {
             setLoggedIn(true);
@@ -136,7 +136,11 @@ function App() {
     // Отправляем запрос в API и получаем обновлённые данные карточки
     api.changeLikeStatus(card._id, !isLiked).then((newCard) => {
       setCards((state) => state.map((c) => c._id === card._id ? newCard : c));
-    });
+    })
+      .catch((err) => {
+        setIsTooltipPopupOpen(true);
+        console.log(err);
+      })
   };
 
   function handleCardDelete(card) {
@@ -173,18 +177,19 @@ function App() {
       .then((data) => {
         if (data && data.data) {
           setRegisterOk(true);
-          setIsTooltipPopupOpen(true);
+          // setIsTooltipPopupOpen(true);
           history.push("/sign-in");
         } else {
           setRegisterOk(false);
-          setIsTooltipPopupOpen(true);
+          // setIsTooltipPopupOpen(true);
           console.log("ERROR", data)
         }
       })
       .catch((err) => {
-        setIsTooltipPopupOpen(true);
-        console.log(err);
+        // setIsTooltipPopupOpen(true);
+        console.log(err)
       })
+      .finally(setIsTooltipPopupOpen(true));
   }
 
   function handleLogin(email, password) {
@@ -198,7 +203,7 @@ function App() {
           console.log("ERROR", data);
         }
       })
-      .catch((err) => { 
+      .catch((err) => {
         setIsTooltipPopupOpen(true);
         console.log(err);
       })
@@ -215,7 +220,7 @@ function App() {
           onClose={closeAllPopups}
           isRegisterOk={isRegisterOk}
         />
-         <ImagePopup
+        <ImagePopup
           name="open-pic"
           card={selectedCard}
           onClose={closeAllPopups}

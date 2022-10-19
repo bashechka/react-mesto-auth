@@ -17,6 +17,8 @@
 @import url(./blocks/form/__container-input/_type/form__container-input_type_password.css);
 @import url(./blocks/form/__container/__container_email-error/form__container_email-error.css);
 @import url(./blocks/form/__container/__container_password-error/form__container_password-error.css);
+@import url(./blocks/form/__wrapper/form__wrapper.css);
+@import url(./blocks/form/__caption-wrapper/form__caption-wrapper.css);
 @import url(./blocks/form/__caption/form__caption.css);
 @import url(./blocks/form/__login-link/form__login-link.css);
 
