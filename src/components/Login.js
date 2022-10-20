@@ -34,7 +34,7 @@ function Login(props) {
           className="form__container-input form__container-input_type_email"
           minLength="2"
           maxLength="40"
-          value={props.email}
+          value={email}
           required />
 
         <span className="form__container form__container_email-error"></span>
@@ -46,7 +46,7 @@ function Login(props) {
           className="form__container-input form__container-input_type_password"
           minLength="2"
           maxLength="200"
-          value={props.password}
+          value={password}
           required />
 
         <span className="form__container form__container_password-error"></span>

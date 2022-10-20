@@ -177,19 +177,16 @@ function App() {
       .then((data) => {
         if (data && data.data) {
           setRegisterOk(true);
-          // setIsTooltipPopupOpen(true);
           history.push("/sign-in");
         } else {
           setRegisterOk(false);
-          // setIsTooltipPopupOpen(true);
           console.log("ERROR", data)
         }
       })
       .catch((err) => {
-        // setIsTooltipPopupOpen(true);
         console.log(err)
       })
-      .finally(setIsTooltipPopupOpen(true));
+      .finally(() => setIsTooltipPopupOpen(true));
   }
 
   function handleLogin(email, password) {
